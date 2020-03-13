@@ -1,0 +1,11 @@
+version: '3.4'
+services:
+  server:
+    build:
+      context: .
+      dockerfile: ./docker/build/Dockerfile
+    ports:
+      - 80:8080
+    volumes:
+      - ./:/go/src
+    command: realize start --run
